@@ -1,0 +1,33 @@
+# Latest LangChain packages (Jan 2025 compatible)
+# Works with Python 3.9-3.12 (3.13 support coming soon)
+
+# Core LangChain - Latest stable versions
+langchain>=0.2.0
+langchain-core>=0.2.0
+langchain-community>=0.2.0
+langchain-openai>=0.1.0
+
+# LangGraph - Latest
+langgraph>=0.2.0
+
+# LangSmith - Latest
+langsmith>=0.1.0
+
+# Vector Store - ChromaDB (NO Docker!)
+chromadb>=0.4.22
+langchain-chroma>=0.1.2
+
+# Streamlit - Latest
+streamlit>=1.31.0
+
+# Utilities - Latest
+python-dotenv>=1.0.0
+requests>=2.31.0
+pypdf>=4.0.0
+pydantic>=2.6.0
+
+# Testing - Latest
+pytest>=8.0.0
+pytest-cov>=4.1.0
+
+# Note: If using Python 3.13, downgrade to Python 3.12 for best compatibility

@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  qdrant:
+    image: qdrant/qdrant:latest
+    container_name: qdrant-local
+    ports:
+      - "6333:6333"  # REST API
+      - "6334:6334"  # gRPC API (optional)
+    volumes:
+      - ./qdrant_storage:/qdrant/storage  # Persist data
+    environment:
+      - QDRANT_LOG_LEVEL=INFO
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:6333/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+# Usage:
+# 1. Start: docker-compose up -d
+# 2. Stop: docker-compose down
+# 3. Check logs: docker-compose logs -f
+# 4. Check status: docker-compose ps
+#
+# Access Qdrant:
+# - REST API: http://localhost:6333
+# - Web UI: http://localhost:6333/dashboard
