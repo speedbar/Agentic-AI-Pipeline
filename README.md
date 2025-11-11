@@ -10,23 +10,6 @@ Document Search: All uploaded documents immediately available for RAG search.
 
 LangChain & Qdrant Integration: Modular, fast, and scalable open-source vector search.
 
-Project Structure
-
-Agentic-AI-Pipeline/
-│
-├── src/
-│   ├── app.py                 # Main Streamlit app
-│   ├── config.py              # API keys and environment settings
-│   ├── documentloader.py      # PDF loader and chunker
-│   ├── graph.py               # Agentic logic and workflow
-│   ├── langsmithevaluator.py  # Optional evaluation logic
-│   ├── llmprovider.py         # LLM and embedding config
-│   ├── vectordb.py            # Vector DB manager (e.g. Qdrant/Chroma)
-│   ├── weatherapi.py          # External weather API integration
-│
-├── requirements.txt
-└── README.md
-
 Installation & Setup
 Clone the repository:
 
